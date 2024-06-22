@@ -1,0 +1,128 @@
+---
+title: "Vanity Roles"
+description: "Award members for advertising your server. Set roles, and update channel."
+icon: "signal"
+---
+
+<Warning>Vanity roles cause a heavy load on the bot, please wait a few seconds if delayed. 
+If delayed for longer than 1 minute, contact the support server</Warning>
+
+<Note>
+  Definitions used in this page:
+  <ParamField path="<script>" type="string" required>
+    In this value, you should place the code/script of your embed, you can 
+    generate one by using the `embedsetup` command.
+  </ParamField>
+</Note>
+
+## Setting up
+
+Award members for advertising your server.
+
+Subcommand: `vanity role` <br /> Module: `vanity` <br /> Description: Set the role to award members.
+
+<Tabs>
+  <Tab title="Example">
+  `vanity role @Member`
+  <Frame caption="Setting the role awarded when user puts vanity in status">
+  <img src="/images/vanity/1.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`vanity role <role>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `vanity channel` <br /> Module: `vanity` <br /> Description: Set the channel to send award logs.
+
+<Tabs>
+  <Tab title="Example">
+  `vanity channel #tests`
+  <Frame caption="Setting the channel to receive vanity roles updates">
+  <img src="/images/vanity/2.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`vanity channel <channel>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `vanity message` <br /> Module: `vanity` <br /> Description: Set the award message. Available variables: > `{role}`: The award role. > `{vanity}`: The vanity code.
+
+<Tip>You can use `embedsetup` to create your embeds</Tip>
+
+<Tabs>
+  <Tab title="Example">
+  `vanity message Thank you for putting {vanity} in your status {user.mention}! You'll be given the {role}!`
+  <Frame caption="Enabling antiraid avatar and setting flags">
+  <img src="/images/vanity/3.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`vanity message <script>`</Tab>
+  <Tab title="Flags">
+    `{role}`:  The award role given to the member.<br/>
+    `{vanity}`: The vanity code for the current server.
+  </Tab>
+</Tabs>
+
+## Disabling & Removing
+
+Subcommand: `vanity channel remove` <br /> Module: `vanity` <br /> Description: Remove award logs channel.
+
+<Tabs>
+  <Tab title="Example">
+  `vanity channel remove #tests`
+  <Frame caption="Removes the channel from receiving vanity roles updates">
+  <img src="/images/vanity/4.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`vanity channel remove <channel>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `vanity disable` <br /> Module: `vanity` <br /> Description: Reset and disable the award system.
+
+<Tabs>
+  <Tab title="Example">
+    `vanity disable`
+    <Frame caption="Disables all vanity roles functionality from the server">
+      <img src="/images/vanity/5.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`vanity disable`</Tab>
+  <Tab title="Flags">No flags are avaliable for this command.</Tab>
+</Tabs>
+
+## How it works
+
+Take a look at how the presence system works
+
+```mermaid
+
+flowchart LR
+subgraph Enabled?
+direction TB
+top1[Yes] --> top12[Give the user the role found in database for vanity roles] --> top13[Is a vanity channel set?] --> left11[Yes]
+topRight11[No] --> topRight12[Do not check for the update, ignore and continue other tasks]
+top13 --> right11[No]
+left11 --> left12[Is the set message default or custom?] 
+right11 --> right12[Give the user the role then return and do nothing]
+left12 --> leftBottom11[Custom]
+leftBottom11 --> leftBottom12[Send the custom vanity message to the set channel]
+left12 --> rightBottom11[Default]
+rightBottom11 --> rightBottom12[Send the default vanity message to the set channel]
+end
+
+    Presence_Update --> Enabled?
+
+

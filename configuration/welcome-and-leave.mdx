@@ -1,0 +1,115 @@
+---
+title: "Welcome & Leave"
+description: "Setting up the channels and message for both welcome & leave events"
+icon: "door-open"
+---
+
+<CardGroup cols={2}>
+  <Card title="Welcome setup" icon="shield" href="#creating-a-welcome-channel">
+    Create, edit and setup your welcome message & channels and truly customise
+    it to your needs making it unique to yourself.
+  </Card>
+  <Card
+    title="Leave setup"
+    icon="arrows-to-circle"
+    href="#creating-a-leave-channel"
+  >
+    Create, edit and setup your leave message & channels and truly customise it
+    to your needs making it unique to yourself.
+  </Card>
+</CardGroup>
+<Card
+  title="/configuration/variables"
+  icon="link"
+  href="/configuration/variables"
+>
+  Want more customisation? Check out the variables page
+  [/configuration/variables](/configuration/variables) to see all the cool
+  variables you can add to your welcome and leave messages to make them truly
+  unique.
+</Card>
+
+<Tip>
+  When setting up help messages, you can use `embedsetup` to easily generate
+  scripts/codes that are compatible with greed.
+</Tip>
+
+## Creating a welcome channel
+
+<Info>
+  The variables used are for example only, to check the rest of the variables,
+  visit [/configuration/variables](/configuration/variables)
+</Info>
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server that you would like to setup welcome for using
+    greed.
+  </Step>
+  <Step title="Create the channel">
+    Setup permissions for the channel with the desired name, for this example we
+    will be using `#welcome`
+  </Step>
+</Steps>
+
+## Creating an embed and setting the welcome channel
+
+<Steps>
+  <Step title="Creating the welcome embed">
+    Run the `,embedsetup` command while to create the welcome embed which you
+    can use variables with, for more information regarding variables:
+    [/configuration/variables](/configuration/variables)
+  </Step>
+  <Step title="Setup the welcome channel">
+    Run the `,welcome add` command which will give you further information, for this
+    example we'll run: `,welcome add #welcome {title: Welcome!} {author: {user.name}}`
+  </Step>
+</Steps>
+
+<Frame caption="Creating the welcome embed and setting it up">
+  <img src="/images/welcome/4.gif" />
+</Frame>
+<br />
+<Frame caption="Testing the functionality of the welcome embed">
+  <img src="/images/welcome/5.gif" />
+</Frame>
+
+## Creating a leave channel
+
+<Tip>
+  The variables used are for example only, to check the rest of the variables,
+  visit [/configuration/variables](/configuration/variables)
+</Tip>
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server that you would like to setup leave for using
+    greed.
+  </Step>
+  <Step title="Create the channel">
+    Setup permissions for the channel with the desired name, for this example we
+    will be using `#leave`
+  </Step>
+</Steps>
+
+## Creating an embed and setting the leave channel
+
+<Steps>
+  <Step title="Creating the leave embed">
+    Run the `,embedsetup` command while to create the leave embed which you
+    can use variables with, for more information regarding variables:
+    [/configuration/variables](/configuration/variables)
+  </Step>
+  <Step title="Setup the leave channel">
+    Run the `,leave add` command which will give you further information, for this
+    example we'll run: `,leave add #leave {title: Goodbye!} {author: {user.name}}`
+  </Step>
+</Steps>
+
+<Frame caption="Creating the leave embed and setting it up">
+  <img src="/images/leave/5.gif" />
+</Frame>
+<br />
+<Frame caption="Testing the functionality of the leave embed">
+  <img src="/images/leave/6.gif" />
+</Frame>

@@ -1,0 +1,196 @@
+---
+title: 'Reactions'
+description: 'Allow members to assign roles to themselves & autoresponders by reacting.'
+icon: 'icons'
+---
+
+<CardGroup cols={2}>
+  <Card title="Reaction Roles" icon="child-reaching" href="#reaction-roles">
+    Setup reaction roles to allow users to automatically assign themself roles which
+    could be used in scenarios such as gender roles, age roles and region roles.
+  </Card>
+  <Card
+    title="Reaction Responders"
+    icon="face-smile"
+    href="#reaction-responders"
+  >
+    Automatically respond to specific triggers with a reaction, which is widely used by our
+    developers, engages the community even more.
+  </Card>
+</CardGroup>
+<Card
+  title="/configuration/variables"
+  icon="link"
+  href="/configuration/variables"
+>
+  Want more customisation? Check out the variables page
+  [/configuration/variables](/configuration/variables) to see all the cool
+  variables you can add to your welcome and leave messages to make them truly
+  unique.
+</Card>
+
+<Tip>You could use these to setup gender based or region based (or even both!) reaction roles.</Tip>
+
+### Table of Contents:
+<AccordionGroup>
+  <Accordion title="Reaction Roles Commands" icon="child-reaching">
+    - [add](#rr-add): Add a new reaction role to a message.
+    - [remove](#rr-remove): Remove a reaction role from a message.
+    - [list](#rr-list): View all reaction roles.
+    - [clear](#rr-clear): Remove all reaction roles.
+  </Accordion>
+  <Accordion title="Reaction Responders Commands" icon="face-smile">
+    - [add](#r-add): Add a new reaction trigger.
+    - [list](#r-list): View all reaction triggers.
+    - [remove](#r-remove): Remove a reaction trigger.
+    - [clear](#r-clear): Remove all reaction triggers.
+  </Accordion>
+</AccordionGroup>  
+
+## Reaction Roles
+
+Allow members to assign roles to themselves.
+
+Subcommand: `reactionrole add` <br /> Module: `reactionroles` <br /> Description: Add a new reaction role to a message.
+
+<div id="rr-add"/>
+<Tabs>
+  <Tab title="Example">
+  `reactionrole add https://discord.com/channels/12475285...... :wave: @pic perms`
+  <Frame caption="Adding a reaction role">
+  <img src="/images/rr/1.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reactionrole add <message> <emoji> <role>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reactionrole remove` <br /> Module: `reactionroles` <br /> Description: Remove a reaction role from a message.
+
+<div id="rr-remove"/>
+<Tabs>
+  <Tab title="Example">
+  `reactionrole remove https://discord.com/channels/12475285...... :wave:`
+  <Frame caption="Removing a reaction role">
+  <img src="/images/rr/2.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reactionrole remove <message> <emoji>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reactionrole list` <br /> Module: `reactionroles` <br /> Description: View all reaction roles.
+
+<div id="rr-list"/>
+<Tabs>
+  <Tab title="Example">
+  `reactionrole list`
+  <Frame caption="Viewing all set reaction roles in the current server">
+  <img src="/images/rr/3.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reactionrole list`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reactionrole clear` <br /> Module: `reactionroles` <br /> Description: Remove all reaction roles.
+
+<div id="rr-clear"/>
+<Tabs>
+  <Tab title="Example">
+  `reactionrole clear`
+  <Frame caption="Removes all the reaction roles from the server">
+  <img src="/images/rr/4.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reactionrole clear`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+## Reaction Responders
+
+Automatically react to messages.
+
+Subcommand: `reaction add` <br /> Module: `reaction` <br /> Description: Add a new reaction trigger.
+
+<div id="r-add"/>
+<Tabs>
+  <Tab title="Example">
+  `reaction add :skull: lmao`
+  <Frame caption="Adding a reaction responder">
+  <img src="/images/rr/5.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reaction add <emoji> <trigger>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reaction list` <br /> Module: `reaction` <br /> View all reaction triggers.
+
+<div id="r-list"/>
+<Tabs>
+  <Tab title="Example">
+  `reaction list`
+  <Frame caption="List all avaliable reaction responders">
+  <img src="/images/rr/6.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reaction list`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reaction remove` <br /> Module: `reaction` <br /> Remove a reaction trigger.
+
+<div id="r-remove"/>
+<Tabs>
+  <Tab title="Example">
+  `reaction remove :skull: lmao`
+  <Frame caption="Removes a reaction responder">
+  <img src="/images/rr/7.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reaction remove <emoji> <trigger>`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `reaction clear` <br /> Module: `reaction` <br /> Remove all reaction triggers.
+
+<div id="r-clear"/>
+<Tabs>
+  <Tab title="Example">
+  `reaction clear`
+  <Frame caption="Removes all the reaction roles in the server">
+  <img src="/images/rr/8.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`reaction clear`</Tab>
+  <Tab title="Flags">
+    No flags are avaliable for this command.
+  </Tab>
+</Tabs>
