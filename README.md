@@ -12,9 +12,9 @@ to power and enhance it
 [`Node.js 20.11.0`](https://nodejs.org/en): JavaScript runtime used to run Javascript code<br />
 [`pnpm 8.14.3`](https://pnpm.io/): Fast, disk space efficient package manager
 
-### Running the bot
+### Starting the docs locally
 
-- You must install all the packages by running `pnpm i package` (NOTE: this project uses global packages, which requires you to run `pnpm setup` if you have not done so yet.)
+- You must install all the packages by running `pnpm i` (NOTE: this project uses global packages, which requires you to run `pnpm setup` if you have not done so yet.)
 - Run `mintlify dev` to first setup the project, after first start up the docs will start up faster. (for more information, head over to [mintlify.com](https://mintlify.com/))
 
 ## 📓 Contributing
