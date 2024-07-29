@@ -1,0 +1,170 @@
+---
+title: 'Moderation'
+description: 'Moderation category provides comprehensive tools and commands to help you manage and maintain a safe, respectful, and orderly community on your Discord server. From banning and kicking users to managing roles and permissions, this section covers everything you need to effectively moderate your server. Learn how to use various moderation commands, set up automated moderation features, and ensure your server remains a welcoming place for all members.'
+icon: 'icons'
+---
+
+<CardGroup cols={3}>
+<Card title="How to ban" icon="shield" href="#banning-users">
+  Learn how to ban users from your server. This includes understanding the ban command, 
+  setting up ban reasons, and managing banned users effectively to maintain a safe and 
+  friendly community.
+</Card>
+
+<Card
+  title="How to kick"
+  icon="User"
+  href="#kicking-users"
+>
+  Learn how to kick users from your server. This includes understanding the kick command, 
+  setting up kick reasons, and managing kicked users to ensure a positive and respectful 
+  community environment.
+</Card>
+
+<Card title="Managing roles" icon="Gear" href="#giving-roles">
+  Learn how to manage roles in your server. This includes adding and removing roles for individual users, 
+  as well as applying roles to all members or bots. Ensure your server is organized and roles are assigned 
+  effectively to maintain a well-structured community.
+</Card>
+
+</CardGroup>
+
+## Banning users
+
+<Info>
+  The variables used are for example only, to check the rest of the variables,
+  visit [/configuration/variables](/configuration/variables)
+</Info>
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server where you want to ban a user.
+  </Step>
+  <Step title="Banning the user">
+    Use the bot command `,ban @username [reason]` in any text channel. Replace `@username` with the actual username of the user you want to ban and `[reason]` with the reason for the ban if necessary. The bot (greed) will then ban the user and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Banning a member">
+  <img src="/images/moderation/ban.gif" />
+</Frame>
+<br />
+<CardGroup cols={1}>
+  <Card title="How to Unban" icon="shield" href="#unbanning-users">
+    Learn how to unban users from your server. This includes understanding the unban command 
+    and restoring access to users who were previously banned.
+  </Card>
+</CardGroup>
+
+## Kicking users
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server where you want to kick a user.
+  </Step>
+  <Step title="Kicking the user">
+    Use the bot command `,kick @username [reason]` in any text channel. Replace `@username` with the actual username of the user you want to kick and `[reason]` with the reason for the kick if necessary. The bot (greed) will then kick the user and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Kicking a member">
+  <img src="/images/moderation/kick.gif" />
+</Frame>
+
+## Unbanning users
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server where you want to unban a user.
+  </Step>
+  <Step title="Unbanning the user">
+    Use the bot command `,unban @username` or `,unban userID` in any text channel. Replace `@username` with the actual username or `userID` with the actual user ID of the user you want to unban. For example, `,unban @username` or `,unban 392300135323009024`. The bot (greed) will then unban the user and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Kicking a member">
+  <img src="/images/moderation/unban.gif" />
+</Frame>
+
+## Purging chat
+
+<Steps>
+  <Step title="Using the purge command">
+    Use the bot command `,purge [number]` in any text channel. Replace `[number]` with the number of messages you want to delete. For example, `,purge 50` will delete the last 50 messages in the channel. The bot (greed) will then remove the specified number of messages and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Purging chat">
+  <img src="/images/moderation/purge.gif" />
+</Frame>
+
+## Giving roles
+
+<Steps>
+  <Step title="Adding roles">
+    Use the bot command `,role add @username roleName` in any text channel. Replace `@username` with the actual username of the member you want to add the role to and `roleName` with the name of the role. For example, `,role add @johnDoe Moderator` will add the "Moderator" role to the user @johnDoe. The bot (greed) will then add the role and notify you of the action.
+  </Step>
+  <Step title="Managing roles for all or bots">
+    You can also use the commands `,role all roleName` or `,role bots roleName` to add or remove a role for all members or all bots in the server. For example, `,role all Member` will add the "Member" role to all users, and `,role bots BotRole` will add the "BotRole" to all bots. The bot (greed) will then apply the role changes and notify you of the action.
+  </Step>
+</Steps>
+
+
+<Frame caption="Adding roles">
+  <img src="/images/moderation/role1.gif" />
+</Frame>
+
+<br />
+-- adding gif later
+<Frame caption="Wrong gif"> 
+  <img src="/images/moderation/role1.gif" />
+</Frame>
+
+
+## Removing roles
+
+<Steps>
+  <Step title="Removing roles">
+    Use the bot command `,role remove @username roleName` in any text channel. Replace `@username` with the actual username of the member you want to remove the role from and `roleName` with the name of the role. For example, `,role remove @x6ur Moderator` will remove the "Moderator" role from the user @x6ur. The bot (greed) will then remove the role and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Removing roles">
+  <img src="/images/moderation/role3.gif" />
+</Frame>
+
+## Changing role colors
+
+<Steps>
+  <Step title="Changing role color">
+    Use the bot command `,role color roleName color` in any text channel. Replace `roleName` with the name of the role you want to change the color of and `color` with the desired color code or name. For example, `,role color Moderator #FF5733` will change the color of the "Moderator" role to the specified color. The bot (greed) will then update the role color and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Changing role color">
+  <img src="/images/moderation/role4.gif" />
+</Frame>
+
+## Adding / Changing role icons 
+
+<Steps>
+  <Step title="Setting the role icon">
+    Use the bot command `,role icon roleName icon|attachment|url` in any text channel. Replace `roleName` with the name of the role you want to set the icon for, and `icon|attachment|url` with the appropriate icon, attachment, or URL. For example, `,role icon Moderator :shield:` will set the shield emoji as the icon for the "Moderator" role, or `,role icon Moderator https://example.com/icon.png` will set the icon from the provided URL. The bot (greed) will then update the role icon and notify you of the action.
+  </Step>
+</Steps>
+
+<Frame caption="Adding an icon">
+  <img src="/images/moderation/role5.gif" />
+</Frame>
+
+## Checking audit logs
+
+<Steps>
+  <Step title="Viewing recent audit logs">
+    Use the bot command `,audit` in any text channel to view recent audit logs. This command will display a list of recent actions taken on the server, such as bans, kicks, role changes, and more.
+  </Step>
+</Steps>
+
+<Frame caption="Viewing audit logs">
+  <img src="/images/moderation/role5.gif" />
+</Frame>

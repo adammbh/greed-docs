@@ -61,6 +61,7 @@
       "pages": [
         "configuration/welcome-and-leave",
         "configuration/security",
+        "configuration/moderation",
         "configuration/vanity-roles",
         "configuration/reactions",
         "configuration/variables"
