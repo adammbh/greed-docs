@@ -168,3 +168,120 @@ icon: 'icons'
 <Frame caption="Viewing audit logs">
   <img src="/images/moderation/role5.gif" />
 </Frame>
+
+## Muting members / Timeout
+
+<Steps>
+  <Step title="Muting or Timing Out a User">
+    Use the bot command `,timeout (user) (time)` in any text channel, for example to mute a user for 1 minute `,mute (x6ur) (1m)`. Both commands perform the same action, temporarily restricting the user's ability to send messages.
+  </Step>
+</Steps>
+
+<Frame caption="Muting a member">
+  <img src="/images/moderation/timeout.gif" />
+</Frame>
+
+## Unmuting members / Untimeout 
+
+<Steps>
+  <Step title="Muting or Timing Out a User">
+    Use the bot command `,untimeout (user) (time)` in any text channel, for example to unmute a user  `,unmute (x6ur)`. Both commands allow users to send messages after being muted / timeout.
+  </Step>
+</Steps>
+
+<Frame caption="Muting a member">
+  <img src="/images/moderation/untimeout.gif" />
+</Frame>
+
+## Locking / Unlocking a channel
+
+<Steps>
+  <Step title="Locking a Channel">
+    Use the bot command `,lock` in any text channel to lock the channel. This command will prevent users from sending messages in the channel until it is unlocked.
+  </Step>
+  <Step title="Unlocking a Channel">
+    Use the bot command `,unlock` in any text channel to unlock the channel. This command will allow users to send messages in the channel again.
+  </Step>
+</Steps>
+
+<Frame caption="Locking / Unlocking a channel">
+  <img src="/images/moderation/lock-unlock.gif" />
+</Frame>
+
+## Nickname Users
+
+<Steps>
+  <Step title="Changing a User's Nickname">
+    Use the bot command `,nick @x6ur xuria` to change a user's nickname.
+  </Step>
+  <Step title="Forcing a Nickname Change">
+    Use the bot command `,nickname force @x6ur xuria` to forcefully change a member's nickname.
+  </Step>
+  <Step title="Removing a Nickname">
+    Use the bot command `,nickname remove @x6ur` to remove a member's nickname.
+  </Step>
+</Steps>
+
+<Frame caption="Nickname a member">
+  <img src="/images/moderation/nickname.gif" />
+</Frame>
+
+## Channel commands
+
+
+<Steps>
+  <Step  title="Turn on/off attachment permissions for a channel">
+         Using `,channel attachments <channel> <state>` will Turn on/off attachment permissions for a channel, for example `,channel attachments #chat true`
+      <Frame caption="Turning on/off attachment permissions for a channel">
+         <img src="/images/moderation/channel1.gif" />
+      </Frame>
+  </Step>
+    <Step  title="Create a new text channel">
+         Using `,channel create <name>` creates a new channel, for example `,channel create chat`
+      <Frame caption="Creating a new text channel">
+         <img src="/images/moderation/channel2.gif" />
+      </Frame>
+  </Step>
+      <Step  title="Delete a text channel">
+          Using `,channel delete <name>` deletes a channel, for example `,channel delete chat`
+      <Frame caption="Deleting a text channel">
+         <img src="/images/moderation/channel3.gif" />
+      </Frame>
+  </Step>
+        <Step  title="Privating a text channel">
+          Using `,channel private <name>` privates a channel, for example `,channel private chat`
+      <Frame caption="Privating a text channel">
+         <img src="/images/moderation/channel4.gif" />
+      </Frame>
+  </Step>
+          <Step  title="Allow a member to view a channel">
+          Using `,channel permit <channel> <member>` allows a member to view a private channel, for example `,channel permit staff 392300135323009024`
+      <Frame caption="Allowing a member to view a channel">
+         <img src="/images/moderation/channel5.gif" />
+      </Frame>
+  </Step>
+            <Step  title="Rename a text channel">
+          Using `,channel rename <channel> <new_name>` gives the channel the new chosen name, for example `,channel rename general chat`
+      <Frame caption="Renaming a text channel">
+         <img src="/images/moderation/channel6.gif" />
+      </Frame>
+  </Step>
+              <Step  title="Revoke a member's permission to view a channel">
+          Using `,channel revoke <channel> <member>` Revokes a member's permission to view a channel, for example `,channel revoke x6ur`
+      <Frame caption="Revoking a member's permission to view a channel">
+         <img src="/images/moderation/channel7.gif" />
+      </Frame>
+  </Step>
+</Steps>
+
+## Nuking a channel 
+
+<Steps>
+  <Step title="Nuke a Channel">
+    Using the bot command `,nuke` deletes the current channel and clones the current channel.
+  </Step>
+</Steps>
+
+<Frame caption="Nuking a channel">
+  <img src="/images/moderation/nuke.gif" />
+</Frame>
