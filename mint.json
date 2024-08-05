@@ -8,6 +8,9 @@
   "analytics": {
     "posthog": {
       "apiKey": "phc_ds8DUIOmRamXtLOekJPgdUJ5sIYxUyagooTn3Y3ZI0k"
+    },
+    "ga4": {
+      "measurementId": "G-ZHEH4NB1B7"
     }
   },
   "favicon": "favicon.svg",
