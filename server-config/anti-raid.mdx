@@ -1,0 +1,63 @@
+---
+title: "Anti-raid"
+description: "Anti-raid in Discord is like a protective barrier that keeps your server safe from trolls and spammers trying to crash your online party."
+---
+
+
+Anti-raid in Discord is like a protective barrier that keeps your server safe from trolls and spammers trying to crash your online party.
+
+Subcommand: `antiraid avatar` <br /> Module: `antiraid` <br /> Description: Security against accounts which don't have an avatar.
+
+<div id="avatar"/>
+<Tabs>
+  <Tab title="Example">
+  `antiraid avatar true --punishment kick`
+  <Frame caption="Enabling antiraid avatar and setting flags">
+  <img src="/images/security/1.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`antiraid avatar <status> [flags]`</Tab>
+  <Tab title="Punishment Types">
+    `ban`: Bans the user when threshold is met <br />
+    `kick`: Kicks the user when threshold is met 
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `antiraid joins` <br /> Module: `antiraid` <br /> Description: Security against accounts which join simultaneously. If multiple members join within the `threshold` then the members will automatically be punished. The `threshold` must be greater than 3.
+
+<div id="joins"/>
+<Tabs>
+  <Tab title="Example">
+  `antiraid joins true --punishment ban --amount 5`
+  <Frame caption="Enabling antiraid joins and setting flags">
+  <img src="/images/security/2.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`antiraid joins <status> [...flags]`</Tab>
+  <Tab title="Punishment Types">
+    `ban`: Bans the user when threshold is met <br />
+    `kick`: Kicks the user when threshold is met 
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `antiraid mentions` <br /> Module: `antiraid` <br /> Description: Security against accounts that spam excessive mentions. If a message contains `threshold` or more mentions then the member will be automatically be punished. The `threshold` must be greater than 3. This only applies for user mentions. Everyone or Role mentions are not included.
+
+<div id="mentions"/>
+<Tabs>
+  <Tab title="Example">
+  `antiraid mentions true --punishment ban --amount 4`
+  <Frame caption="Enabling antiraid mentions and setting flags">
+  <img src="/images/security/3.gif" />
+  </Frame>
+  </Tab>
+  <Tab title="Syntax">`antiraid mentions <status> [...flags]`</Tab>
+  <Tab title="Punishment Types">
+    `ban`: Bans the user when threshold is met <br />
+    `kick`: Kicks the user when threshold is met 
+  </Tab>
+</Tabs>
+

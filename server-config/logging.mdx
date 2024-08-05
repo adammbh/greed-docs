@@ -1,0 +1,142 @@
+---
+title: "Logging"
+description: "The base command for managing server logs."
+icon: ""
+---
+
+Subcommand: `logging enable` <br /> Module: `logging` <br /> Description: Set events to be logged in a channel.
+
+<div id="enable"/>
+<Tabs>
+  <Tab title="Example">
+    `logging enable #general`
+    <Frame caption="Enabling all events to #general channel">
+      <img src="/images/security/12.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging enable <channel> [event]`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `logging disable` <br /> Module: `logging` <br /> Description: Remove an existing logging channel.
+
+<div id="disable"/>
+<Tabs>
+  <Tab title="Example">
+    `logging disable #general`
+    <Frame caption="Disabling all events from #general channel">
+      <img src="/images/security/13.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging disable <channel> [event]`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `logging ignore` <br /> Module: `logging` <br /> Description: Ignore a channel or user from being unintentionally logged.
+
+<div id="ignore"/>
+<Tabs>
+  <Tab title="Example">
+    `logging ignore @66adam`
+    <Frame caption="Ignoring @66adam from all logs">
+      <img src="/images/security/14.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging ignore <member|channel>`</Tab>
+    <Tab title="Functionality">
+    ```mermaid
+  flowchart LR
+    subgraph Ignored?
+        direction TB
+        top1[Yes] --> bottom1[Do not log from this user/channel and <br /> do not save in database]
+        top2[No] --> bottom2[Keep logging from this user/channel and <br /> save in database]
+    end
+
+    Event --> Ignored?
+```
+
+  </Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `logging list` <br /> Module: `logging` <br /> Description: logging list
+
+<div id="list"/>
+<Tabs>
+  <Tab title="Example">
+    `logging list`
+    <Frame caption="Views all the logs in the server">
+      <img src="/images/security/15.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging list`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `logging ignore list` <br /> Module: `logging` <br /> Description: View all ignored channels and users.
+
+<div id="ignore-list"/>
+<Tabs>
+  <Tab title="Example">
+    `logging ignore list`
+    <Frame caption="View all users & channels that are being ignored from logging">
+      <img src="/images/security/16.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging ignore list`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `logging ignore remove` <br /> Module: `logging` <br /> Description: logging ignore remove
+
+<div id="ignore-remove"/>
+<Tabs>
+  <Tab title="Example">
+    `logging ignore remove @66adam`
+    <Frame caption="Removing @66adam from being ignored from logs">
+      <img src="/images/security/17.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`logging ignore remove <member|channel>`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
+
+<br />
+
+Subcommand: `audit` <br /> Module: `logging` <br /> Description: View server audit log entries.
+
+<div id="audit"/>
+<Tabs>
+  <Tab title="Example">
+    `audit @66adam`
+    <Frame caption="Viewing the audit specifically for @66adam">
+      <img src="/images/security/18.gif" />
+    </Frame>
+  </Tab>
+  <Tab title="Syntax">`audit [user] [action]`</Tab>
+  <Tab title="Punishment Types">
+    No flags for punishment are avaliable for this command.
+  </Tab>
+</Tabs>
