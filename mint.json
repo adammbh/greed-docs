@@ -68,7 +68,8 @@
           "pages": [
             "server-config/anti-raid",
             "server-config/anti-nuke",
-            "server-config/logging"
+            "server-config/logging",
+            "server-config/jail-setup"
           ],
           "icon": "gear"
         },

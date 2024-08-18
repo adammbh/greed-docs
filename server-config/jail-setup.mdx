@@ -4,4 +4,50 @@ description: "Setting up jail in your discord server."
 icon: ""
 ---
 
+<CardGroup cols={2}>
+  <Card title="Jail setup" icon="handcuffs" href="#setting-up-jail">
+       Automatically create a channel named 'jail.' This channel will serve as a restricted area for users who violate server rules.
+  </Card>
+  <Card title="How to jail a user" icon="question" href="#jailing-users">
+  Learn how to enforce server rules and restrict users by setting up a jail system. Automatically create a channel where rule violators will be confined.
+  </Card>
+</CardGroup>
 
+
+# Setting up jail
+
+<Steps>
+  <Step title="Head over to your Discord Server">
+    Click on the Discord Server where you want to set up the jail system using your bot, Greed.
+  </Step>
+  <Step title="Configuring Jail">
+    - Run the command `,setupjail` in any channel.
+    - This command will automatically create a channel called `jail`.
+    - You can customize the name of the jail channel if needed.
+
+    <Frame caption="Creating jail channel & role.">
+     <img src="/images/jail/jail.gif" />
+    </Frame>
+  </Step>
+</Steps>
+
+# Jailing users
+
+<Steps>
+  <Step title="Configuring Jail">
+    - Run the command `,jail <user>` for example `,jail @x6ur` in any channel.
+    - This command will automatically mutes the user in every channel besides `jail` for the user.
+
+    <Frame caption="Example of jailing a user.">
+     <img src="/images/jail/jail1.gif" />
+    </Frame>
+  </Step>
+    <Step title="Unjaling a user">
+    - Run the command `,ujail <user>` for example `,ujail @x6ur` in any channel.
+    - This command will automatically unjail the mentioned user.
+
+    <Frame caption="Example of unjailing a user.">
+     <img src="/images/jail/jail2.gif" />
+    </Frame>
+  </Step>
+</Steps>
