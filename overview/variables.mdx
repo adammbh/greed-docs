@@ -10,33 +10,82 @@ Variables that can be used across a wide range of commands and invoke messages.
 ## Guild Variables
 Guild variables can be useful in areas such as welcome messages when displaying your overall member count & more.
 
-| Variable                        | Output                                    | Example                        |
-|----------------------------|-----------------------------------------|-------------------------------------- |
-| `{guild.name}`             | Shows guild's name                      | `My Discord Server`                   |
-| `{guild.icon}`             | Shows guild's icon                      | `https://r2.greed.best/greed.png`        |
-| `{guild.created_at}`       | Shows the date when the server was created | `2023-08-01`                       |
-| `{guild.count}`            | Shows the member count                  | `1,604`                                |
-| `{guild.boost_count}`      | Shows the number of boosts in the server | `34`                                 |
-| `{guild.booster_count}`    | Shows the number of boosters in the server | `10`                               |
-| `{guild.vanity}`           | Shows the server's vanity code if any    | `/greedbot`                           |
-| `{guild.boost_tier}`       | Shows the guild's boost level            | `Level 2`                            |
-| `{guild.count.format}`     | Shows the member count in the ordinal format | `1,500th`                        |
-| `{guild.boost_count.format}` | Shows the boosts count in ordinal format | `25th`                             |
-| `{guild.booster_count.format}` | Shows the boosters count in ordinal format | `10th`                         |
+| Variable | Output | Example |
+|----------|---------|----------|
+| `{guild.name}` | Shows guild's name | `My Discord Server` |
+| `{guild.id}` | Shows guild's ID | `123456789012345678` |
+| `{guild.count}` | Shows member count | `1,604` |
+| `{guild.region}` | Shows guild's region | `N/A` |
+| `{guild.shard}` | Shows guild's shard ID | `0` |
+| `{guild.owner_id}` | Shows guild owner's ID | `123456789012345678` |
+| `{guild.created_at}` | Shows guild creation timestamp | `1627776000` |
+| `{guild.emoji_count}` | Shows number of emojis | `50` |
+| `{guild.role_count}` | Shows number of roles | `25` |
+| `{guild.boost_count}` | Shows number of boosts | `34` |
+| `{guild.boost_tier}` | Shows boost level | `Level 2` |
+| `{guild.preferred_locale}` | Shows guild's locale | `en-US` |
+| `{guild.key_features}` | Shows guild's features | `ANIMATED_ICON, BANNER` |
+| `{guild.icon}` | Shows guild's icon URL | `https://cdn.discordapp.com/icons/...` |
+| `{guild.banner}` | Shows guild's banner URL | `https://cdn.discordapp.com/banners/...` |
+| `{guild.splash}` | Shows guild's splash URL | `https://cdn.discordapp.com/splashes/...` |
+| `{guild.discovery}` | Shows guild's discovery splash URL | `https://cdn.discordapp.com/discovery-splashes/...` |
+| `{guild.max_presences}` | Shows max presences | `10000` |
+| `{guild.max_members}` | Shows max members | `100000` |
+| `{guild.max_video_channel_users}` | Shows max video channel users | `25` |
+| `{guild.afk_timeout}` | Shows AFK timeout | `300` |
+| `{guild.afk_channel}` | Shows AFK channel | `#afk` |
+| `{guild.channels}` | Shows all channel names | `general, announcements, rules` |
+| `{guild.channels_count}` | Shows total channel count | `25` |
+| `{guild.text_channels}` | Shows text channel names | `general, announcements` |
+| `{guild.text_channels_count}` | Shows text channel count | `15` |
+| `{guild.voice_channels}` | Shows voice channel names | `General, Gaming` |
+| `{guild.voice_channels_count}` | Shows voice channel count | `8` |
+| `{guild.category_channels}` | Shows category names | `Information, Community` |
+| `{guild.category_channels_count}` | Shows category count | `5` |
 
 ## User Variables
-User variables are also useful in areas such as welcome but can also be used in other areas such as invoked messages.
+User variables are useful in areas such as welcome messages and invoked messages.
 
-| Variable                        | Output                                    | Example                        |
-|----------------------------|-----------------------------------------|-------------------------------------- |
-| `{user}`                   | Shows user full name with discriminator  | `66adam#0`                           |
-| `{user.name}`              | Shows user's username                    | `66adam`                             |
-| `{user.discriminator}`     | Shows user's discriminator               | `#0`                                 |
-| `{user.id}`                | Shows user's id                          | `123456789012345678`                 |
-| `{user.mention}`           | Mentions the user                        | `@66adam`                            |
-| `{user.avatar}`            | Shows user's avatar                      | `https://example.com/avatar.png`     |
-| `{user.created_at}`        | Shows the user's account creation date   | `2020-05-01`                         |
-| `{user.joined_at}`         | Shows the user's join date               | `2021-06-15`                         |
+| Variable | Output | Example |
+|----------|---------|----------|
+| `{user}` | Shows user's full name with discriminator | `66adam#0` |
+| `{user.id}` | Shows user's ID | `123456789012345678` |
+| `{user.mention}` | Mentions the user | `@66adam` |
+| `{user.name}` | Shows username | `66adam` |
+| `{user.tag}` | Shows discriminator | `#0` |
+| `{user.avatar}` | Shows avatar URL | `https://cdn.discordapp.com/avatars/...` |
+| `{user.display_avatar}` | Shows display avatar URL | `https://cdn.discordapp.com/avatars/...` |
+| `{user.created_at}` | Shows account creation timestamp | `1627776000` |
+| `{user.created_at_timestamp}` | Shows account creation timestamp | `1627776000` |
+| `{user.display_name}` | Shows display name | `66adam` |
+| `{user.bot}` | Shows if user is a bot | `Yes/No` |
+| `{user.guild_avatar}` | Shows guild-specific avatar URL | `https://cdn.discordapp.com/guilds/...` |
+| `{user.joined_at}` | Shows join timestamp | `1627776000` |
+| `{user.joined_at_timestamp}` | Shows join timestamp | `1627776000` |
+| `{user.boost}` | Shows if user is boosting | `Yes/No` |
+| `{user.boost_since}` | Shows boost start date | `2023-01-01` |
+| `{user.boost_since_timestamp}` | Shows boost start timestamp | `1627776000` |
+| `{user.color}` | Shows user's color | `#7289DA` |
+| `{user.top_role}` | Shows user's highest role | `@Moderator` |
+| `{user.role_list}` | Shows all role names | `Moderator, Member` |
+| `{user.role_text_list}` | Shows all role mentions | `@Moderator, @Member` |
+| `{user.join_position}` | Shows join position | `1500` |
+| `{user.join_position_suffix}` | Shows join position with suffix | `1500th` |
+
+## Channel Variables
+Channel variables can be used to display information about text channels, voice channels, and threads.
+
+| Variable | Output | Example |
+|----------|---------|----------|
+| `{channel.name}` | Shows channel name | `general` |
+| `{channel.id}` | Shows channel ID | `123456789012345678` |
+| `{channel.mention}` | Mentions the channel | `#general` |
+| `{channel.type}` | Shows channel type | `text` |
+| `{channel.position}` | Shows channel position | `1` |
+| `{channel.topic}` | Shows channel topic | `General discussion` |
+| `{channel.category_id}` | Shows category ID | `123456789012345678` |
+| `{channel.category_name}` | Shows category name | `Information` |
+| `{channel.slowmode_delay}` | Shows slowmode delay | `5` |
 
 # Social Variables
 Variables that can be used for their specific category/social.
